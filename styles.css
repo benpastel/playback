@@ -1,0 +1,71 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+#recordButton {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+/* Button styles for different states */
+.loaded {
+    background-color: #2e7d32;
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
+}
+
+.recording {
+    background-color: #c62828;
+    animation: pulse 1.5s infinite;
+    box-shadow: 0 0 10px rgba(198, 40, 40, 0.5);
+}
+
+.playback {
+    background-color: #1565c0;
+    box-shadow: 0 0 10px rgba(21, 101, 192, 0.5);
+}
+
+/* Recording animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(198, 40, 40, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(198, 40, 40, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(198, 40, 40, 0);
+    }
+}
+
+#statusText {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    color: #aaaaaa;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
